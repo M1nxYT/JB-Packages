@@ -11,7 +11,8 @@ client.on("ready", () => {
         cmdDir: "commands/",
         eventDir: "events/",
         unkownCommandMessage: false,
-        language: "english",
+        language: "english", //english, spanish, portuguese, russian, german, czech, turkish
+        ownLanguageFile: require("./message.json"),
         slash: {
             slash: 'both',
             prefix: 'jb!'
