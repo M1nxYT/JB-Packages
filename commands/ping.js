@@ -23,5 +23,8 @@ module.exports = {
         }
       })
     }
+    else {
+      return
+    }
   }
 };
