@@ -26,11 +26,14 @@ function truncateString(str, num) {
 }
 
 module.exports = {
-  name: "search",
+  name: "lookup",
   description: "Lookup a package",
-  aliases: ["lookup"],
-  cooldown: "5s",
-  run: async ({ client, message }, args) => {
+  aliases: ["search"],
+  cooldown: "10s",
+	expectedArgs: "<package:3:Package Name>",
+	minArgs: 1,
+  run: async({client, interaction, member, message, guild, channel, respond, edit}, args) => {
+		console.log("a")
     let btn1 = new MessageButton().setEmoji('<:first:855836521110044684>').setStyle('grey').setID('first');
     let btn2 = new MessageButton().setEmoji('<:prev:858788835668656168>').setStyle('grey').setID('prev');
     let btn3 = new MessageButton().setEmoji('<:info:857412918843932702>').setStyle('grey').setID('info');
@@ -89,7 +92,7 @@ module.exports = {
         }
       };
 
-      message.channel.send({
+      respond({
         components: row,
         embeds: result
       })

@@ -5,7 +5,9 @@ const { getColorFromURL } = require('color-thief-node');
 
 module.exports = {
   name: "ping",
-  description: "Check bot ping",
+	description: "Lookup a package",
+  aliases: ["pong"],
+	cooldown: "10s",
   run: async ({ client, message, interaction }, args) => {
     if (typeof (message) !== 'undefined') {
       message.channel.send('Loading data').then(async (msg) => {

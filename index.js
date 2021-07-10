@@ -17,7 +17,7 @@ client.on("ready", () => {
       slash: 'both',
       prefix: 'jb!'
     },
-    defaultCooldown: 1,
+    defaultCooldown: 3,
   })
 
   GCommandsClient.on("debug", (debug) => {
